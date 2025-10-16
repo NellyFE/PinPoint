@@ -1,8 +1,9 @@
 import './App.css'
-import { BrowserRouter,RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Mappage } from './Pages/MapPage'
-import { Welcomepage } from './Pages/welcomepage'
-const router = BrowserRouter([
+import  {Welcomepage} from './Pages/welcomepage'
+
+const router = createBrowserRouter([
   {
 path: "/",
 element: <Welcomepage/>
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
     <div>
+   
       <RouterProvider router={router} />
     </div>
    
