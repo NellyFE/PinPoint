@@ -10,3 +10,8 @@ body {
  box-sizing: border-box;
 }
 
+.flipped-right {
+  transform: scaleX(-1);
+}
+
+
