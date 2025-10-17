@@ -1,9 +1,11 @@
 import { BiCurrentLocation } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 export const Nav = () => {
+  const navigate = useNavigate()
   return (
-    <nav className="border-2 w-full flex ">
-      <div className="max-w-7xl w-full justify-between mx-auto flex px-6 py-4 border border-red-600">
+    <nav className=" w-full flex ">
+      <div className="max-w-7xl w-full justify-between mx-auto flex px-6 py-4 ">
 
         {/* logo  */}
         <div className="flex">
@@ -15,8 +17,8 @@ export const Nav = () => {
         </div>
 
         {/* get started button */}
-        <div className="border bg-[#00441b] rounded-lg px-6 py-2">
-            <button className=" text-white ">Get Started</button>
+        <div onClick={() => navigate("/app")} className=" bg-[#00441b] text-white rounded-lg px-6 py-2 border-2 border-transparent hover:border-[#00441b] hover:text-[#00441b] hover:bg-transparent transition-all duration-300 cursor-pointer">
+            <button className="cursor-pointer  ">Get Started</button>
         </div>
 
       </div>

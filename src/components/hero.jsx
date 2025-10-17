@@ -1,25 +1,31 @@
+import { Button } from "./button";
+
 export const Hero = () => {
   return (
-    <section>
-      <div className=" flex h-[87vh] w-full max-w-7xl">
+    <section className="relative h-[88.5vh] w-full overflow-hidden">
+      {/* Hero Image */}
+      <img
+        src="/images/pin11.jpg"
+        alt="Travel"
+        className="h-full w-full object-cover flipped-right"
+      />
 
-     
-        <img
-          src="/images/pin11.jpg"
-          alt=""
-          className=" object-cover w-full flipped-right"
-        />
- 
- <div className="flex flex-col absolute inset-0 justify-center border border-amber-500 w-1/2 items-center">
-        <h1 className="flex text-2xl">Map your dream destinations</h1>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
 
-         <p>Pin every place you want to visit,
-        add notes, and watch your travel wishlist come alive on the map.</p>
-      </div>
+      {/* Text Content */}
+      <div className="absolute inset-0 flex flex-col justify-center px-10 text-white max-w-2xl">
+        <h1 className="text-4xl font-bold mb-4 leading-tight">
+          Map your dream destinations.
+        </h1>
 
-    <div className="absolute inset-0 h-[80vh] w-full bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+        <p className="text-lg text-gray-200 mb-6">
+          Pin every place you want to visit, add notes, and watch your travel wishlist come alive on the map.
+        </p>
 
-
+        <div className=" w-1/4">
+        <Button/>
+        </div>
       </div>
     </section>
   );
