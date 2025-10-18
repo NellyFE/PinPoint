@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Nav } from "../components/navbar";
+import Sidebar from "../components/sidebar";
 
 export const Mappage = () => {
 const [destinations, setDestinations] = useState([
@@ -32,7 +33,7 @@ const [destinations, setDestinations] = useState([
 
         {/* left:sidebar */}
         <div className="sidebar">
-<h2>side bar will go here</h2>
+            <Sidebar destinations={destinations} setDestinations={setDestinations}/>
         </div>
 
 
