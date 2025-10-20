@@ -26,7 +26,6 @@ const [destinations, setDestinations] = useState([
 
   return (
     <section>
-      <Nav />
 
       {/* main app layout container  */}
       <div className="sidebar-layout flex h-screen bg-[#f9fafb]">
