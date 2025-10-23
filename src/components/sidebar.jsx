@@ -9,25 +9,27 @@ export default function Sidebar({ destinations, setDestinations }) {
   };
 
   const handleExport = () => {
-    // Convert destinations array to JSON string
-    const dataStr = JSON.stringify(destinations, null, 2);
 
-    // Create a Blob (binary large object) - think of it as a file in memory
-    const dataBlob = new Blob([dataStr], { type: "appliication/json" });
+    //convert the destinations to json
+    const dataStr = JSON.stringify(destinations, null , 2)
 
-    // Create a temporary URL for the blob
-    const url = URL.createObjectURL(dataBlob);
+    //create a blob for it
+    const dataBlob = new Blob([dataStr], {type:'application/json'})
 
-    //Create an invisible link element
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "travel-wishlist.json";
+    //create a temporary URL for the blob
+    const url = URL.createObjectURL(dataBlob)
 
-    // Click the link programmatically to trigger download
+    //create an invisible link 
+    const link = document.createElement("a")
+    href.link = url
+    link.download = "travel-wishlist.json"
+
+    //click the link to download 
     link.click();
 
-    // Clean up the temporary URL
-    URL.revokeObjectURL(url);
+    //clean the temporary url
+    URL.revokeObjectURL(url)
+   
   };
 
   return (
@@ -93,3 +95,23 @@ export default function Sidebar({ destinations, setDestinations }) {
     </div>
   );
 }
+
+//  // Convert destinations array to JSON string
+//     const dataStr = JSON.stringify(destinations, null, 2);
+
+//     // Create a Blob (binary large object) - think of it as a file in memory
+//     const dataBlob = new Blob([dataStr], { type: "appliication/json" });
+
+//     // Create a temporary URL for the blob
+//     const url = URL.createObjectURL(dataBlob);
+
+//     //Create an invisible link element
+//     const link = document.createElement("a");
+//     link.href = url;
+//     link.download = "travel-wishlist.json";
+
+//     // Click the link programmatically to trigger download
+//     link.click();
+
+//     // Clean up the temporary URL
+//     URL.revokeObjectURL(url);
