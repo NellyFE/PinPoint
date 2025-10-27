@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Nav } from "../components/navbar";
 import Sidebar from "../components/sidebar";
+import { DestinationModal } from "../components/destinationmodal";
+
+
+
 
 export const Mappage = () => {
 const [destinations, setDestinations] = useState([
@@ -23,6 +27,25 @@ const [destinations, setDestinations] = useState([
     },
 ])
 
+const [showModal, setShowModal] = useState (false);
+
+//function to open modal 
+const openAddModal = () => {
+  setShowModal(true);
+};
+
+//function to close modal 
+const closeModal = () => {
+  setShowModal(false);
+}
+
+//function to add destinations
+const addDestinations = (newDestination) => {
+setDestinations([...destinations,newDestination]);
+closeModal();
+}
+
+
 
   return (
     <section>
@@ -32,17 +55,34 @@ const [destinations, setDestinations] = useState([
 
         {/* left:sidebar */}
         <div className="sidebar">
-            <Sidebar destinations={destinations} setDestinations={setDestinations}/>
+            <Sidebar 
+            destinations={destinations} 
+            setDestinations={setDestinations}
+            onAddClick={openAddModal}
+            />
         </div>
 
 
         {/* right: map area */}
-        <div className="flex-1 bg-blue-300">
-            <h2>map will go here</h2>
+        <div className="flex-1">
+              <img
+        src="/images/mapdecoy.png"
+        alt="Travel"
+        className="h-full w-full object-cover"
+      />
+
         </div>
 
-
       </div>
+
+      {/*modal only shows when clicked*/}
+
+      {showModal && 
+      <DestinationModal
+      onClose={closeModal}
+      onSave={addDestinations}
+      />
+      }
     </section>
   );
 };

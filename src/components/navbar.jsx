@@ -5,7 +5,7 @@ export const Nav = () => {
   const navigate = useNavigate()
   return (
     <nav className=" w-full flex ">
-      <div className="max-w-7xl w-full justify-between mx-auto flex px-6 py-4 border-b border-black/10 shadow-lg shadow-black ">
+      <div className="max-w-7xl w-full justify-between mx-auto flex px-6 py-4 border-b border-black/10 ">
 
         {/* logo  */}
         <div className="flex">

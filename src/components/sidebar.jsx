@@ -3,8 +3,9 @@ import { SlLocationPin } from "react-icons/sl";
 import { FiPlus } from "react-icons/fi";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-export default function Sidebar({ destinations, setDestinations }) {
+export default function Sidebar({ destinations, setDestinations , onAddClick }) {
   const handleAdd = () => {
+    onAddClick();
     console.log("add button clicked");
   };
 
