@@ -66,7 +66,7 @@ closeModal();
         {/* right: map area */}
         <div className="flex-1">
               <img
-        src="/images/mappp.jpeg"
+        src="/images/map2.jpeg"
         alt="Travel"
         className="h-full w-full object-cover"
       />
