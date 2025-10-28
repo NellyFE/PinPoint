@@ -11,14 +11,44 @@ const [formData,setFormData] = useState({
     notes:""
 })
 
+//handle input changes
 const handleChange = () => {
     const {name,value} = e.target;
     setFormData({...formData,[name]:value})
 }
 
-    return(
-        <div>
+//handle save changes
+const handleSave = () =>{
+    if (!formData.name || !formData.lat || !formData.lng){
+        alert('please fill in all fields');
+        return
+    }
 
+
+//create new destination
+const newDestination = {
+    id: Date.now(),
+    name: formData.name,
+    lat: parseFloat(formData.lat),
+    lng: parseFloat(formData.lng),
+    image: formData.image,
+    notes: formData.notes
+}
+
+onSave(newDestination)
+
+}
+
+    return(
+        <div className="modal">
+
+            <div className="modal-content">
+                
+                <div className="modal-header">
+                    d
+                </div>
+            </div>
+          
         </div>
     )
 }
