@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Nav } from "../components/navbar";
 import Sidebar from "../components/sidebar";
 import { DestinationModal } from "../components/destinationmodal";
+import { MapContainer } from "../components/mapcontainer";
 
 
 
@@ -65,7 +65,7 @@ closeModal();
 
         {/* right: map area */}
         <div className="flex-1 bg-blue-300">
-            <h2>map will go here</h2>
+            <MapContainer destinations={destinations}/>
         </div>
 
       </div>

@@ -62,7 +62,7 @@ onSave(newDestination)
                     name='name'
                     placeholder="e.g Tokyo, Japan"
                     value={formData.name}
-                    onClick={handleChange}
+                    onChange={handleChange}
                     className="w-full border border-[#d1d5db] outline-[#e5f5e0] p-2 rounded-lg box-border"
                     />
                 </div>
@@ -80,7 +80,7 @@ onSave(newDestination)
                     step="0.0001"
                     placeholder="35.6762" 
                     value={formData.lat}
-                    onClick={handleChange}
+                    onChange={handleChange}
                     className="w-full border border-[#d1d5db] outline-[#e5f5e0] p-2 rounded-lg box-border"
 />
                 </div>
