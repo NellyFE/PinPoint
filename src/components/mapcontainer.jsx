@@ -37,21 +37,25 @@ export const MapContainer = ({destinations}) => {
     //update markers when destination changes
     useEffect(() => {
         //if map doesn't exist, wait
-        if (!map.current) return;  // Added the ! here
+        if (!map.current) return;  
+
+        console.log('Updating markers for destinations:', destinations);
 
         //remove all old markers first
-        Object.values(markersRef.current).forEach(marker => marker.remove());  // Capital O
+        Object.values(markersRef.current).forEach(marker => marker.remove());  
         markersRef.current = {};
 
         //add new markers for destination
         destinations.forEach(dest => {
+
+            console.log('Creating marker for:', dest.name, dest.lat, dest.lng);
             //create custom marker element
-            const el = document.createElement('div');  // Changed to document.createElement
+            const el = document.createElement('div');  
             el.className = 'custom-marker';
             el.style.backgroundImage = 'url(https://docs.mapbox.com/mapbox-gl-assets/images/custom_marker.png)';
             el.style.width = '30px';
             el.style.height = '40px';
-            el.style.backgroundSize = '100%';  // Added .style here
+            el.style.backgroundSize = '100%';  
             el.style.cursor = 'pointer';
 
             //create marker and add to map

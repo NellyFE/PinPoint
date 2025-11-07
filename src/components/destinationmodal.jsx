@@ -75,7 +75,7 @@ onSave(newDestination)
                     </label>
 
                     <input 
-                    type="text"
+                    type="number"
                     name="lat"
                     step="0.0001"
                     placeholder="35.6762" 
@@ -114,7 +114,7 @@ onSave(newDestination)
                 name="notes" 
                 placeholder="share your travel goals..."
                 id=""
-                value={formData.value}
+                value={formData.notes}
                 onChange={handleChange}
                 className="w-full h-[96px] border border-[#d1d5db] p-2 outline-[#e5f5e0] rounded-md text-sm resize-none box-border">
 
